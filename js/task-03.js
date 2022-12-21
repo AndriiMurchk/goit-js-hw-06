@@ -17,19 +17,13 @@ const images = [
 const galleryListEl = document.querySelector('.gallery');
 
 const makeGalleryCard = ({url, alt} = {}) => {
-  
-  const galleryItemEl = document.createElement('li');
-
-  const galleryImgEl = document.createElement('img');
-  galleryImgEl.src = url;
-  galleryImgEl.alt = alt;
-  
-  galleryItemEl.append(galleryImgEl);
-
-  return galleryItemEl; 
+  return `
+  <li class="gallery-item">
+    <img src="${url}" alt="alt">
+    </li>
+  `;
 };
 
-const galleryCards = images.map (el => makeGalleryCard(el));
+const galleryCards = images.map(el => makeGalleryCard(el)).join('');
 
-galleryListEl.append(...galleryCards);
-
+galleryListEl.innerHTML = galleryCards;

@@ -22,7 +22,7 @@ formEl.addEventListener('submit', (event) => {
   };
 
   console.log(formData);
-  document.querySelector('.login-form').reset();
+ event.target.reset();
   
   }
 

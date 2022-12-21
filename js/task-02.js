@@ -9,20 +9,20 @@ const ingredients = [
 ];
 
 
-const ListEl = document.getElementById("ingredients");
+const listEl = document.getElementById("ingredients");
 
 const makeList = (vegetaible) => {
   
-  const ItemEl = document.createElement('li');
-  ItemEl.classList.add('item');
-  ItemEl.innerHTML = vegetaible;
+  const itemEl = document.createElement('li');
+  itemEl.classList.add('item');
+  itemEl.innerHTML = vegetaible;
   
   
 
-  return ItemEl; 
+  return itemEl; 
 };
 
-const ListVegEl = ingredients.map (el => makeList(el));
+const listVegEl = ingredients.map (el => makeList(el));
 
-ListEl.append(...ListVegEl);
+listEl.append(...listVegEl);
 
